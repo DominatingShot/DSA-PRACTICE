@@ -1,5 +1,5 @@
 class Solution:
-    def maxFrequency(self, nums: List[int], k: int) -> int:
+    def maxFrequency(self, nums: list[int], k: int) -> int:
         nums.sort()
         l=[0]
         for x in nums:
