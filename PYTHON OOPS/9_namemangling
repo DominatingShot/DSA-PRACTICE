@@ -1,0 +1,19 @@
+# defining a class named Animal    
+class Animal:    
+  def __init__(self, name, home):    
+    self.__name = name  # private attribute    
+    self.__home = home  # private attribute    
+    
+  # private method    
+  def __display_data(self):    
+    print(self.__name, "lives in", self.__home)    
+    
+# instantiating the class    
+wild_animal = Animal("Lion", "Den")    
+    
+# accessing private attributes using Name Mangling    
+print(wild_animal._Animal__name)    
+print(wild_animal._Animal__home)    
+    
+# trying to call the private method using Name Mangling    
+wild_animal._Animal__display_data()    

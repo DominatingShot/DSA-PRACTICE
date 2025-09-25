@@ -1,0 +1,29 @@
+from abc import ABC, abstractmethod  
+  
+# Abstract class  
+class Vehicle(ABC):  
+         
+    @abstractmethod  
+    def start(self):  
+        pass  # Abstract method with no implementation  
+     
+    @abstractmethod  
+    def stop(self):  
+        pass  
+  
+# Concrete class implementing the abstract methods  
+class Car(Vehicle):  
+      
+    def start(self):  
+        print("Car is starting with a key ignition.")  
+  
+    def stop(self):  
+        print("Car is stopping using the brake.")  
+  
+# Trying to instantiate an abstract class will raise an error  
+# vehicle = Vehicle()  # TypeError  
+  
+# Creating an instance of the concrete class  
+my_car = Car()  
+my_car.start()  
+my_car.stop()  
